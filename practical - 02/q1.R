@@ -1,3 +1,5 @@
+#part 01
+
 #read data into a variable
 library(readr)
 stu_performance <- read_csv(file = "E:/22Second Sem/Laboratory 2/R/practical - 02/archive/Student Performance new.csv")
@@ -96,6 +98,12 @@ print(avg_math_by_gen)
 print(avg_read_by_gen)
 print(avg_write_by_gen)
 
+
+#part 02
+Melbourne_Housing_Snapshot <- read_csv(file = "E:/22Second Sem/Laboratory 2/R/practical - 02/archive- 2/melb_data.csv")
+Melbourne_Housing_Snapshot
+
+#
 
 
 
