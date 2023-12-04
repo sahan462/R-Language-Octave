@@ -103,8 +103,14 @@ print(avg_write_by_gen)
 Melbourne_Housing_Snapshot <- read_csv(file = "E:/22Second Sem/Laboratory 2/R/practical - 02/archive- 2/melb_data.csv")
 Melbourne_Housing_Snapshot
 
-#
+#Print first few values of the dataset
+print(head(Melbourne_Housing_Snapshot))
 
+# Count the number of missing values in each attribute
+missing_values <- colSums(is.na(Melbourne_Housing_Snapshot))
+print(missing_values)
 
-
-
+#Find the mean value for “YearBuilt”
+meanYearBuilt <- mean(Melbourne_Housing_Snapshot$YearBuilt, na.rm = TRUE)
+print(meanYearBuilt)
+                                                
