@@ -1,5 +1,4 @@
 heart_data <- read.csv("dataset/heart.csv")
-print(heart_data)
 
 #1)iterate through data set to count the number of rows
 row_count = 0
