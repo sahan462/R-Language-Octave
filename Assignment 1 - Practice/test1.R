@@ -86,6 +86,112 @@ rownames(data) == row.names(data) #used to retriece row names
 
 dimnames(data) #displays the row names and column names in a single command
 
+max(data[c('Age')]) == max(data$Age)
+min(data$Age)
+sum(data$Age)
+length(data$Age) #retrieves the number of columns in the dataframe
+mean(data$Age)
+median(data$Age)
+var(data$Age)#variance
+sd(data$Age)
+
+summary(data)
+
+rowSums(USArrests) #displays the sum of individual rows in the data set
+colSums(USArrests) #displays the sum of individual columns in the data set
+
+rowMeans(USArrests) #displays mean of the individual rows in the data set
+colMeans(USArrests) #displays mean of the individual columns in the data set
 
 
+data[3,] #displays only the third row of the data frame
+data[c(1,3,5), ] #displays just the rows 1,3 and 5
+data[-5,] #displays all the rows except the 5th row
+data[, 2] #displays just the second column
+
+#Extract specific columns
+result <- data.frame(data$Name, data$Age)
+print(result)
+class(result)
+
+#Adding new columns to the given dataset
+data$dept <- c("IT", "Operations", "HR")
+data
+
+
+#importing data of differenct types
+df <- read.csv(file = "iris.csv", header = TRUE)
+df2 <- read.table(file = "color.txt", header = TRUE)
+
+
+#remove Rows with NA
+
+na.omit(data)
+
+complete.cases(data)
+complete_rows <- data[complete.cases(data), ]
+print(complete_rows)
+
+
+#print the number of NA values in rach row
+is.na(data)
+rowSums(is.na(data))
+
+
+#-----------------------------------------Exercise 4------------------------------------
+data("iris")
+
+#1
+class(iris)
+
+#2
+# Use sapply to find the class of each column
+column_classes <- sapply(iris, class)
+print(column_classes)
+
+#3
+summary(iris)
+
+#4
+head(iris)
+
+#5
+colnames(iris)
+iris_df = data.frame(iris)
+print(iris_df)
+
+#6
+row.names(iris_df)
+
+#7
+colnames(iris_df)
+
+#8
+ncol(iris)
+nrow(iris)
+
+#9
+last_two_rows = iris_df[(nrow(iris_df)-1): nrow(iris_df),]
+print(last_two_rows)
+
+last_two_columns = iris_df[,(ncol(iris_df-1)): ncol(iris_df)]
+print(last_two_columns)
+
+#10
+# Get rows with Sepal.Width > 3.5 using which()
+selected_rows <- which(iris$Sepal.Width > 3.5)
+
+# Display the result
+print(iris[selected_rows, ])
+
+
+#-----------------------------------------Functions-------------------------------
+f1 = function(x,c){
+  return (x+c)
+}
+print(f1(12,12))
+
+for(i in 1:5){
+  print(i)
+}
 
