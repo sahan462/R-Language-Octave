@@ -92,3 +92,59 @@ hist(vals)
 #----------------BoxPlot------------------------
 
 boxplot(vals)
+
+
+data <- c(12, 15, 18, 20, 22, 25, 27, 30, 35, 100)
+
+#calculating quartiles and IQR
+q <- quantile(data, probs = c(.025, .075))
+q
+
+Q1 <- q[1]
+Q3 <- q[2]
+
+IQR_Value <- IQR(data)
+print(IQR_Value)
+
+#calculating lower and upper bounds for outliers
+lower_bound <- Q1 - 1.5 * IQR_Value
+upper_bound <- Q3 + 1.5 * IQR_Value
+ 
+#identifying outliers
+Outliers <- data[data < lower_bound | data > upper_bound]
+print(Outliers)
+
+
+#------------------Scatter Plots-----------------------
+
+study_hours <- c(14, 42, 10, 32, 5, 10, 25, 18)
+study_hours
+
+gpa <- c(2.91, 3.98, 2.22, 3.81, 1.0, 1.82, 2.79, 2.48)
+plot(
+  study_hours,
+  gpa,
+  xlab = "No of Hours Studied Per Week",
+  ylab = "GPA",
+  main = "Scatterplot Example",
+  col = "darkblue",
+  pch = 16
+)
+
+
+#-------------------------------Exercise 1--------------------------------
+
+ex1_data <- c( sample(1:100, 100, replace = TRUE))
+print(ex1_data)
+
+mean(ex1_data)
+median(ex1_data)
+mode(ex1_data)
+percentile_90 = quantile(ex1_data, 0.9)
+range(ex1_data)
+IQR(ex1_data)
+var(ex1_data)
+sd(ex1_data)
+cov = (sd(ex1_data)/length(ex1_data)) * 100
+print(cov)
+round(cov,2)
