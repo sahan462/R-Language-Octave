@@ -115,6 +115,34 @@ Outliers <- data[data < lower_bound | data > upper_bound]
 print(Outliers)
 
 
+
+# Example data for multiple groups
+group1 <- c(15, 20, 22, 25, 30)
+group2 <- c(35, 40, 45, 50, 55)
+
+# Combine data into a list
+data_list <- list(Group1 = group1, Group2 = group2)
+
+# Draw a boxplot for multiple groups
+boxplot(data_list, main = "Boxplot Example", ylab = "Values", col = c("lightblue", "lightgreen"))
+
+
+
+
+
+
+data <- c(15, 20, 22, 25, 30, 35, 40, 45, 50)
+
+
+# Create a boxplot with additional statistics
+boxplot(data, main = "Boxplot with Summary Statistics", ylab = "Values",
+        notch = TRUE, col = "lightblue", border = "black",
+        names = c("Group1"), # Change group name if needed
+        boxwex = 0.6, # Adjust width of the boxes
+        outline = FALSE, # Do not plot outliers separately
+        stats = c("median", "quartiles", "range")) # Specify statistics to display
+
+
 #------------------Scatter Plots-----------------------
 
 study_hours <- c(14, 42, 10, 32, 5, 10, 25, 18)
