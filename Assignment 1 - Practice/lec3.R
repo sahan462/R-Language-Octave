@@ -80,6 +80,21 @@ print(frequency_table)
 
 hist(vals)
 
+# Set of weights
+weights <- c(14, 22, 33, 45, 56, 23, 12, 56, 45, 34, 23, 11, 17, 3, 5, 23, 34, 38, 54, 6, 7, 24, 48, 46)
+
+# Create a histogram
+hist(weights, 
+     main = "Histogram of Parcel Weights",
+     xlab = "Weight",
+     ylab = "Frequency",
+     xlim = c(0, 70),
+     ylim = c(0, 10),
+     col = "yellow",
+     breaks = seq(0, 70, by = 5),
+     width = 5)
+
+
 #v is a vector containing numeric values used in histogram
 #main indicates title of the chart
 #xlab is used to give description of x axis

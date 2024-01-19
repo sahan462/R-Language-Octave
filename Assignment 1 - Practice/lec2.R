@@ -94,7 +94,8 @@ mean(data$Age)
 median(data$Age)
 var(data$Age)#variance
 sd(data$Age)
-
+cov = sd(data$Age)/length(data$Age) * 100
+print(cov)
 summary(data)
 
 rowSums(USArrests) #displays the sum of individual rows in the data set
