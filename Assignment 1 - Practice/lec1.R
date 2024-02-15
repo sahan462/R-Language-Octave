@@ -43,6 +43,8 @@ exp
 v1 <- seq(1, 50, 7)
 v1
 
+length(v1)
+
 #Sometimes it’s necessary to have 
 #repeated values, for which we use 
 #rep()
