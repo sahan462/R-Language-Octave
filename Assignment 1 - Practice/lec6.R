@@ -8,6 +8,7 @@ data <- data.frame(Age, Glucose_Level)
 
 # Perform linear regression
 linear_model <- lm(Glucose_Level ~ Age, data)
+linear_model
 
 # Display the regression summary
 summary(linear_model)

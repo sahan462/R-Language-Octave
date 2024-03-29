@@ -71,8 +71,10 @@ stem(vals)
 
 #------------------Frequency Table-----------
 ranges <- cut(vals, breaks = c(101, 111, 121,131,141,151,161))
+print(ranges)
+
 frequency_table <- table(ranges)
-print(frequency_table)
+print((frequency_table[1]))
 
 #----------------Histogram-------------------
 
@@ -91,7 +93,7 @@ hist(weights,
      xlim = c(0, 70),
      ylim = c(0, 10),
      col = "yellow",
-     breaks = seq(0, 70, by = 5),
+     breaks = seq(0, 70,  5),
      width = 5)
 
 

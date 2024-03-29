@@ -75,3 +75,6 @@ m
 
 x <- matrix(1:12, nrow=3, byrow = TRUE)
 print(x)
+
+lst <- list(name="sahan", wife="404 not found", children=0)
+print(lst$name)

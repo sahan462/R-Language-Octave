@@ -14,9 +14,11 @@ print(result)
 arr[1,2,2]
 
 #access all the elements at 2nd column of 1st matrix
-cat('\n2nd column Elements of 1st matrix', arr[,c(2),1])
+cat('\n2nd column Elements of 1st matrix', arr[,c(1,2),1])
+cat('\n2nd column Elements of 1st matrix', arr[,2,1])
 
 #access all the elements at 1st row of 2nd matrix
+cat('\n1st row Elemenys of 2nd matrix', arr[c(1), ,2]) #just type the row you want without 'c'
 cat('\n1st row Elemenys of 2nd matrix', arr[1, ,2]) #just type the row you want without 'c'
 
 
@@ -49,7 +51,7 @@ dim(A) <- c(3,4) #can be used to change the dimensions of the vector
 print(A)
 
 U <- list(month = A, num=1:12)
-print(A)
+print(U)
 
 
 #---------------------------------------Data Frames-----------------------------------------
@@ -66,7 +68,7 @@ names <- c('Alice', 'Bob', 'Charlie')
 ages <- c(25, 30, 28)
 city <- c('New York', 'San Francisco', 'Chicago')
 data <- data.frame(Name = names, Age=ages, City=city)
-data
+class(data)
 
 is.data.frame(data)
 is.list(data)
@@ -172,7 +174,7 @@ ncol(iris)
 nrow(iris)
 
 #9
-last_two_rows = iris_df[(nrow(iris_df)-1): nrow(iris_df),]
+last_two_rows = iris_df[c(nrow(iris_df)-1): nrow(iris_df),]
 print(last_two_rows)
 
 last_two_columns = iris_df[,(ncol(iris_df-1)): ncol(iris_df)]
